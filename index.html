@@ -7,6 +7,8 @@
   <title>Document</title>
 </head>
 <body>
+
+  <img src="media/logo.png" height="250px" width="250px" hub usemap="#hubmap">
   
   <form action="SENDEADRESSE" id="ft-form" method="POST" accept-charset="UTF-8">
     <fieldset>
@@ -69,8 +71,33 @@
       <input type="submit" value="Anfrage senden">
     </div>
   </form>
+
+  <h2 class="w3-center">Zufriedene Kunden:</h2>
+
+<div class="w3-content w3-section" style="max-width:500px">
+  <img class="mySlides" src="media/1A81B007-AAD1-4F6B-85F8-0B29618E241E.JPG" style="width:100%">
+  <img class="mySlides" src="media/JPEG-Bild-433E-8234-89-0.jpeg" style="width:100%">
+  <img class="mySlides" src="media/filtered-757ED004-67F7-4EA3-999C-5035F9A61614.gif" style="width:100%">
+  <img class="mySlides" src="media/filtered-A5066043-4762-4BDD-9AB2-E6F78A3D1059.gif" style="width:100%">
+</div>
   
 
 </body>
+<script>
+  var myIndex = 0;
+  carousel();
+  
+  function carousel() {
+    var i;
+    var x = document.getElementsByClassName("mySlides");
+    for (i = 0; i < x.length; i++) {
+      x[i].style.display = "none";  
+    }
+    myIndex++;
+    if (myIndex > x.length) {myIndex = 1}    
+    x[myIndex-1].style.display = "block";  
+    setTimeout(carousel, 2000); // Change image every 5 seconds
+  }
+  </script>
 </html>
 
