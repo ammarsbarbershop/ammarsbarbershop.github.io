@@ -10,22 +10,29 @@
 <body>
 
   <div>
-    <img src="media/logo.png" style="display: flex;align-items: center;align-self: center;align-content: center;" height="250px" width="250px" hub usemap="#hubmap">
+    <img src="media/logo.png" style="display: block;
+    margin-left: auto;
+    margin-right: auto;"  height="250px" width="250px" hub usemap="#hubmap">
   </div>
   
   <form action="https://formspree.io/f/mvoezwae" id="ft-form" method="POST" accept-charset="UTF-8">
     <label>
+      
       <input name="subject" disabled value="Terminbuchung" />
     </label>
+
+    <br>
     
     <label>
       Deine Mail:
       <input type="email" name="email">
     </label>
+    <br>
     <label>
       Vorname:
       <input type="text" name="firstname">
     </label>
+    <br>
     <label>
       Nachname:
       <input type="text" name="lastname">
@@ -34,10 +41,14 @@
       Was für Wünsche? (Haarschnitt, Bart, Initimfade, ...)
       <textarea name="message"></textarea>
     </label>
+    <br>
     <label>
       Datum und Uhrzeit:
-      <input type="datetime" name="termin">
+      <input type="datetime-local" name="termin">
     </label>
+
+    <button type="submit">Anfrage an big daddy Ammar senden :)</button>
+
   </form>
 
   <h2 style="text-align: center;">Zufriedene Kunden:</h2>
@@ -67,5 +78,36 @@
     setTimeout(carousel, 2000); // Change image every 5 seconds
   }
   </script>
+  <style>
+    input[type=text], select {
+      width: 100%;
+      padding: 12px 20px;
+      margin: 8px 0;
+      display: inline-block;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+    }
+    
+    input[type=submit] {
+      width: 100%;
+      background-color: #4CAF50;
+      color: white;
+      padding: 14px 20px;
+      margin: 8px 0;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    
+    input[type=submit]:hover {
+      background-color: #45a049;
+    }
+    
+    div {
+      border-radius: 5px;
+      padding: 20px;
+    }
+    </style>
 </html>
 
