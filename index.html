@@ -3,76 +3,44 @@
 <head>
   <meta charset="UTF-8">
   <link rel="stylesheet" href="index.css">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
 </head>
 <body>
 
-  <img src="media/logo.png"  hub usemap="#hubmap">
+  <div>
+    <img src="media/logo.png" style="display: flex;align-items: center;align-self: center;align-content: center;" height="250px" width="250px" hub usemap="#hubmap">
+  </div>
   
-  <form action="SENDEADRESSE" id="ft-form" method="POST" accept-charset="UTF-8">
-    <fieldset>
-      <legend>Für Person</legend>
-      <label>
-        Name
-        <input type="text" name="Name" required>
-      </label>
-      <div class="two-cols">
-        <label>
-          E-Mail-Adresse
-          <input type="email" name="E-Mail" required>
-        </label>
-        <label>
-          Telefonnummer
-          <input type="tel" name="Telefon">
-        </label>
-      </div>
-    </fieldset>
-    <fieldset>
-      <legend>Terminwunsch</legend>
-      <div class="two-cols">
-        <label>
-          Datum
-          <input type="date" name="Terminwunsch" required>
-        </label>
-        <div class="inline">
-          <label>
-            <input type="hidden" name="Vormittags erwünscht" value="Nein">
-            <input type="checkbox" name="Vormittags erwünscht" value="Ja">
-            Vormittags
-          </label>
-          <label>
-            <input type="hidden" name="Nachmittags erwünscht" value="Nein">
-            <input type="checkbox" name="Nachmittags erwünscht" value="Ja">
-            Nachmittags
-          </label>
-        </div>
-      </div>
-      <p>Bestätigung gewünscht per</p>
-      <div class="inline">
-        <label>
-          <input type="radio" name="Terminbestätigung per" value="E-Mail" checked>
-          E-Mail
-        </label>
-        <label>
-          <input type="radio" name="Terminbestätigung per" value="Telefon">
-          Telefon
-        </label>
-      </div>
-      <div>
-        <label>
-          <input type="checkbox" name="Datenverarbeitung bestätigt" value="Ja" required>
-          Ich bestätige, dass ich mit der Verarbeitung meiner Eingaben zum Zwecke der Anfragebearbeitung, einverstanden bin.
-        </label>
-      </div>
-    </fieldset>
-    <div class="btns">
-      <input type="text" name="_gotcha" value="" style="display:none;">
-      <input type="submit" value="Anfrage senden"><a href="mailto:Ammarsbarbershop11@gmail.com?subject=Mail from our Website&body=Du hast eine Terminanfrage von: ">Send Email</a></div>>
-    </div>
+  <form action="https://formspree.io/f/mvoezwae" id="ft-form" method="POST" accept-charset="UTF-8">
+    <label>
+      <input name="subject" disabled value="Terminbuchung" />
+    </label>
+    
+    <label>
+      Deine Mail:
+      <input type="email" name="email">
+    </label>
+    <label>
+      Vorname:
+      <input type="text" name="firstname">
+    </label>
+    <label>
+      Nachname:
+      <input type="text" name="lastname">
+    </label>
+    <label>
+      Was für Wünsche? (Haarschnitt, Bart, Initimfade, ...)
+      <textarea name="message"></textarea>
+    </label>
+    <label>
+      Datum und Uhrzeit:
+      <input type="datetime" name="termin">
+    </label>
   </form>
 
-  <h2 class="w3-center">Zufriedene Kunden:</h2>
+  <h2 style="text-align: center;">Zufriedene Kunden:</h2>
 
 <div class="w3-content w3-section" style="max-width:500px;display: flex;align-self: center;align-items: center;align-content: center;">
   <img class="mySlides" src="media/1A81B007-AAD1-4F6B-85F8-0B29618E241E.JPG" style="width:100%">
